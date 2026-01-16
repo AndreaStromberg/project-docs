@@ -8,7 +8,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 
-<body class="bg-gray-950 text-white">
+<body class="bg-gray-950 text-gray-300">
     <!-- HEADER -->
     <header
         class="border-b border-b-white/10 flex justify-between px-6 h-15 items-center fixed w-full top-0 bg-gray-950 z-99">
@@ -23,10 +23,10 @@
         </nav>
     </header>
     <!-- HUVUDINNEHÅLL -->
-    <div class="grid grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15">
+    <div class="grid grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15 grid-rows-[auto-auto]">
 
         <!-- Sidebar -->
-        <div class="relative">
+        <div class="relative row-span-full col-start-1">
             <div class="absolute inset-0">
                 <div class="sticky top-15 bottom-0 h-full max-h-[calc(100dvh-60px)] overflow-y-auto px-6 py-8">
 
@@ -229,39 +229,238 @@
         </div>
 
         <!-- Skiljekolumn -->
-        <div class="bg-white/10"></div>
+        <div class="bg-white/10 row-span-full col-start-2"></div>
 
         <!-- Main -->
-        <!-- Björn skriver py10 men slår inte igenom, py-12 funkar -->
-        <main class="px-20 py-12">
+        <main class="px-20 py-8 row-start-1 col-start-3 mb-32">
             <article>
-                <header>
+                <header class="mb-10">
                     <!-- Björn skriver text-xs, verkar inte slå igenom för mig, samma med mt-3 coh mb-6 -->
                     <p class="font-mono text-xs tracking-wider uppercase text-gray-500 mt-3 mb-6">Installation</p>
 
                     <!-- Björn skriver text-3xl men funkar inte för mig -->
-                    <h1 class="text-white text-2xl">Get started with Tailwind CSS</h1>
+                    <h1 class="text-white text-3xl">Get started with Tailwind CSS</h1>
 
                     <!-- Björn skriver text-base/normal och my-4 men verkar inte fungera för mig -->
-                    <p class="text-base/normal my-4">Tailwind CSS works by scanning all of your HTML files, JavaScript
+                    <p class="text-base/relaxed my-4">Tailwind CSS works by scanning all of your HTML files, JavaScript
                         components, and any other
                         templates for class names, generating the corresponding styles and then writing them to a static
                         CSS
                         file.</p>
-                    <p class="text-base/normal my-4">It's fast, flexible, and reliable — with zero-runtime.</p>
+                    <p class="text-base/relaxed my-4">It's fast, flexible, and reliable — with zero-runtime.</p>
                 </header>
 
-                <div>
+                <div class="mb-16">
+                    <h2 class="text-white text-l mb-4">Installation</h2>
+
+                    <div>
+                        <!-- Tabs -->
+                        <ul class="border-b border-white/10 flex gap-6">
+                            <li><button class="py-3 text-sm text-white border-b border-white">Using Vite</button></li>
+                            <li><button class="py-3 text-sm text-white">Using PostCSS</button></li>
+                            <li><button class="py-3 text-sm text-white">Tailwind CLI</button></li>
+                            <li><button class="py-3 text-sm text-white">Framework guides</button></li>
+                            <li><button class="py-3 text-sm text-white">Play CDN</button></li>
+                        </ul>
+
+                        <!-- Tabs innehåll -->
+                        <div>
+                            <!-- Tab 1 -->
+                            <div class="py-6">
+                                <p class="text-sm/loose max-w-[80ch]">
+                                    Installing Tailwind CSS as a Vite plugin is the most seamless way to integrate it
+                                    with frameworks like Laravel, SvelteKit, React Router, Nuxt, and SolidJS.
+                                </p>
+                            </div>
+
+                            <!-- step by step grid -->
+                            <div class="grid grid-cols-[auto_2fr_3fr] gap-x-8 gap-y-12 items-start">
+
+                                <!-- Siffra -->
+                                <div class="border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                    <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
+                                    <div class="text-[10px] font-mono relative">01</div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-sm">
+                                    <h3 class="text-slate-200 font-medium mb-3">Create your project</h3>
+                                    <p class="text-sm/6">
+                                        Start by creating a new Vite project if you don’t have one set up already.
+                                        The
+                                        most common approach is to use <a href=""
+                                            class="text-white font-medium underline underline-offset-3">Create
+                                            Vite</a>.</p>
+                                </div>
+
+                                <!-- Kodrutan -->
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl">
+                                    <!-- Toppdelen av kodrutan -->
+                                    <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
+                                        <p class="text-white/50 text-xs">Terminal</p>
+                                        <button class="opacity-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                            </svg>
+
+
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Innehållet i kodrutan -->
+                                    <div class="border border-white/5 bg-white/5 rounded-l">
+
+                                        <!-- pre är ett element för förformaterad text. Den ser till att allt sådant som mellanslag och tabbningar kommer med och är kvar -->
+                                        <pre class="flex p-5 text-sm">
+
+                                                <!-- Code är ett element som är bra för att presentera just kod. Den ser till att ett monoteckensnitt används. I monoteckensnitt är alla bokstäver lika breda, används ofta för kod -->
+                                                <code class="flex flex-col">
+                                                    <span><span class="text-pink-400">npm</span> <span class="text-sky-300">create vite@latest my-project </span> </span>
+                                                    <span><span class="text-violet-300">cd</span> <span class="text-sky-300">my-project</span> </span>
+
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+
+                                <!-- Siffra -->
+                                <div class="border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                    <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
+                                    <div class="text-[10px] font-mono relative">01</div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-sm">
+                                    <h3 class="text-slate-200 font-medium mb-3">Create your project</h3>
+                                    <p class="text-sm/6">
+                                        Start by creating a new Vite project if you don’t have one set up already.
+                                        The
+                                        most common approach is to use <a href=""
+                                            class="text-white font-medium underline underline-offset-3">Create
+                                            Vite</a>.</p>
+                                </div>
+
+                                <!-- Kodrutan -->
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl">
+                                    <!-- Toppdelen av kodrutan -->
+                                    <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
+                                        <p class="text-white/50 text-xs">Terminal</p>
+                                        <button class="opacity-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                            </svg>
+
+
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Innehållet i kodrutan -->
+                                    <div class="border border-white/5 bg-white/5 rounded-l">
+
+                                        <!-- pre är ett element för förformaterad text. Den ser till att allt sådant som mellanslag och tabbningar kommer med och är kvar -->
+                                        <pre class="flex p-5 text-sm">
+
+                                                <!-- Code är ett element som är bra för att presentera just kod. Den ser till att ett monoteckensnitt används. I monoteckensnitt är alla bokstäver lika breda, används ofta för kod -->
+                                                <code class="flex flex-col">
+                                                    <span><span class="text-pink-400">npm</span> <span class="text-sky-300">create vite@latest my-project </span> </span>
+                                                    <span><span class="text-violet-300">cd</span> <span class="text-sky-300">my-project</span> </span>
+
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
 
                 </div>
 
                 <footer>
+                    <div class="text-sm flex gap-2 border border-white/10 p-6 rounded-xl items-start">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-12 -translate-y-3">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                        </svg>
+                        <p class="grow text-sm/6 pr-10">
+                            <strong class="text-white font-medium">Are you stuck? </strong> Setting up Tailwind with
+                            Vite can be a bit different across
+                            different build
+                            tools. Check our framework guides to see if we have more specific instructions for your
+                            particular setup.
+                        </p>
+                        <a href=""
+                            class="text-sm font-medium self-center text-nowrap flex px-4 py-2 bg-white/10 rounded-full">Explore
+                            our
+                            framework guides</a>
+
+                    </div>
 
                 </footer>
             </article>
         </main>
+
         <!-- Skiljekolumn -->
-        <div class="bg-white/10"></div>
+        <div class="bg-white/10 row-span-full col-start-4"></div>
+
+        <!-- Footer -->
+        <footer class="col-[2/-1] row-start-2">
+            <div class="border-y border-white/10 px-10 mb-10">
+
+                <nav class="px-20 flex gap-10 text-white">
+                    <ul class="grow flex flex-col gap-6 text-sm border-x border-white/10 px-1 py-10">
+                        <li class="font-semibold"><a href="">Lorem, ipsum.</a></li>
+                        <li><a href="">Recusandae</a></li>
+                        <li><a href="">Vero, eveniet.</a></li>
+                        <li><a href="">Voluptate</a></li>
+                        <li><a href="">Quia, ipsum!</a></li>
+                    </ul>
+                    <ul class="grow flex flex-col gap-6 text-sm border-x border-white/10 px-1 py-10">
+                        <li class="font-semibold"><a href="">Lorem ipsum</a></li>
+                        <li><a href="">Harum</a></li>
+                        <li><a href="">Nesciunt</a></li>
+                        <li><a href="">Dolorum</a></li>
+                        <li><a href="">Dignissimos</a></li>
+                    </ul>
+                    <ul class="grow flex flex-col gap-6 text-sm border-x border-white/10 px-1 py-10">
+                        <li class="font-semibold"><a href="">Lorem</a></li>
+                        <li><a href="">Expedita</a></li>
+                        <li><a href="">Cumque</a></li>
+                        <li><a href="">Debitis</a></li>
+                        <li><a href="">Illum,</a></li>
+                    </ul>
+                    <ul class="grow flex flex-col gap-6 text-sm border-x border-white/10 px-1 py-10">
+                        <li class="font-semibold"><a href="">Lorem, ipsum.</a></li>
+                        <li><a href="">Aspernatur</a></li>
+                        <li><a href="">Perspiciatis</a></li>
+                        <li><a href="">Dolores, vel?</a></li>
+                        <li><a href="">Tempora</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- copyright -->
+            <div class="px-10 mb-24">
+
+                <div class="flex px-20">
+                    <p class="ml-auto text-sm text-gray-500">Copyright © 2026 Tailwind Labs Inc.· <a href=""
+                            class="text-gray-500">Trademark Policy</a></p>
+
+                </div>
+            </div>
+
+        </footer>
 
     </div>
 
