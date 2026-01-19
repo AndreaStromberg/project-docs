@@ -13,31 +13,57 @@
     <header
         class="border-b border-b-white/10 flex justify-between px-6 h-15 items-center fixed w-full top-0 bg-gray-950 z-99">
         <a href="" class="text-white text-2xl font-medium">rabbitdocs</a>
+
+        <button
+            class="flex item-center gap-1 pl-1.5 py-0.5 pr-2 ml-auto mr-6 bg-white/5 rounded-full border border-white/5">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-4 stroke-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+
+            <!-- kbd är ett html-element som står för keyboard och används för att ta emot input från tangentbordet -->
+            <kbd class="text-xs text-gray-600 font-mono">ctrl K</kbd>
+
+        </button>
         <nav>
-            <ul class="flex gap-6 text-sm">
+            <ul class="flex items-center gap-6 text-sm">
                 <li><a href="" class="text-white hover:text-sky-400">Docs</a></li>
                 <li><a href="" class="text-white hover:text-sky-400">Blog</a></li>
                 <li><a href="" class="text-white hover:text-sky-400">Showcase</a></li>
                 <li><a href="" class="text-white hover:text-sky-400">Sponsor</a></li>
+                <li><a href=""
+                        class="hover:text-sky-400 flex border border-dashed border-sky-300/30 text-sky-300 py-0.5 px-1.5">Plus</a>
+                </li>
             </ul>
         </nav>
+
+        <a href="" class="ml-6">
+            <svg viewBox="0 0 20 20" class="size-5 fill-gray-400">
+                <path
+                    d="M10 0C4.475 0 0 4.475 0 10a9.994 9.994 0 006.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.287-.6-1.175-1.025-1.412-.35-.188-.85-.65-.013-.663.788-.013 1.35.725 1.538 1.025.9 1.512 2.337 1.087 2.912.825.088-.65.35-1.088.638-1.338-2.225-.25-4.55-1.112-4.55-4.937 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.274.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 012.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0020 10c0-5.525-4.475-10-10-10z">
+                </path>
+            </svg>
+        </a>
     </header>
     <!-- HUVUDINNEHÅLL -->
-    <div class="grid grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15 grid-rows-[auto-auto]">
+    <div class="grid grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15 grid-rows-[auto_auto]">
 
         <!-- Sidebar -->
         <div class="relative row-span-full col-start-1">
             <div class="absolute inset-0">
                 <div class="sticky top-15 bottom-0 h-full max-h-[calc(100dvh-60px)] overflow-y-auto px-6 py-8">
 
-                    <!-- Björn gör gap 8 men funkar inte för mig -->
+
                     <nav class="grid gap-8">
                         <ul class="grid gap-4">
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href=""
+                                    class="group flex items-center gap-2 text-sm hover:text-white text-white font-medium">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
                                         </svg>
@@ -46,12 +72,13 @@
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M6.429 9.75 2.25 12l4.179 2.25m0-4.5 5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0 4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0-5.571 3-5.571-3" />
                                         </svg>
@@ -62,12 +89,13 @@
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M3 8.25V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V8.25m-18 0V6a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 6v2.25m-18 0h18M5.25 6h.008v.008H5.25V6ZM7.5 6h.008v.008H7.5V6Zm2.25 0h.008v.008H9.75V6Z" />
                                         </svg>
@@ -78,12 +106,13 @@
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                                         </svg>
@@ -94,12 +123,13 @@
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M14.25 9.75 16.5 12l-2.25 2.25m-4.5 0L7.5 12l2.25-2.25M6 20.25h12A2.25 2.25 0 0 0 20.25 18V6A2.25 2.25 0 0 0 18 3.75H6A2.25 2.25 0 0 0 3.75 6v12A2.25 2.25 0 0 0 6 20.25Z" />
                                         </svg>
@@ -109,27 +139,32 @@
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                                         </svg>
                                     </div>
                                     <span>Courses</span>
+
+                                    <span
+                                        class="flex border border-dashed border-sky-300/30 text-sky-300 py-px px-1 text-[10px] uppercase ml-0.5">new</span>
                                 </a>
                             </li>
 
                             <li>
-                                <a href="" class="flex items-center gap-2 text-sm">
+                                <a href="" class="group flex items-center gap-2 text-sm hover:text-white">
 
                                     <div>
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="size-5">
+                                            stroke-width="1.5" stroke="currentColor"
+                                            class="group-hover:stroke-white size-5 stroke-gray-600">
                                             <path stroke-linecap="round" stroke-linejoin="round"
                                                 d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
                                         </svg>
@@ -140,22 +175,25 @@
                         </ul>
 
                         <div>
-                            <!-- Björn mb-2 slår inte igenom -->
                             <h3 class="text-gray-500 text-xs tracking-wider uppercase mb-2 font-mono">Getting started
                             </h3>
                             <ul class="flex flex-col gap-1 text-sm">
 
-                                <!-- Björn py-1 slår inte igenom -->
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Installation</a>
+                                <li class="border-l border-white"><a href=""
+                                        class="flex px-5 py-1 font-medium text-white">Installation</a>
                                 </li>
 
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Editor setup</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Editor setup</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Compatibility</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Compatibility</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Upgrade guide</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Upgrade guide</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Colors</a></li>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Colors</a></li>
                             </ul>
                         </div>
 
@@ -163,15 +201,20 @@
                             <h3 class="text-gray-500 text-xs tracking-wider uppercase mb-2 font-mono">Getting started
                             </h3>
                             <ul class="flex flex-col gap-1 text-sm">
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Installation</a>
+
+
+
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Editor setup</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Editor setup</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Compatibility</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Compatibility</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Upgrade guide</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Upgrade guide</a>
-                                </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Colors</a></li>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Colors</a></li>
                             </ul>
                         </div>
 
@@ -179,15 +222,20 @@
                             <h3 class="text-gray-500 text-xs tracking-wider uppercase mb-2 font-mono">Getting started
                             </h3>
                             <ul class="flex flex-col gap-1 text-sm">
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Installation</a>
+
+
+
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Editor setup</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Editor setup</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Compatibility</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Compatibility</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Upgrade guide</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Upgrade guide</a>
-                                </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Colors</a></li>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Colors</a></li>
                             </ul>
                         </div>
 
@@ -195,15 +243,20 @@
                             <h3 class="text-gray-500 text-xs tracking-wider uppercase mb-2 font-mono">Getting started
                             </h3>
                             <ul class="flex flex-col gap-1 text-sm">
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Installation</a>
+
+
+
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Editor setup</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Editor setup</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Compatibility</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Compatibility</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Upgrade guide</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Upgrade guide</a>
-                                </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Colors</a></li>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Colors</a></li>
                             </ul>
                         </div>
 
@@ -211,17 +264,23 @@
                             <h3 class="text-gray-500 text-xs tracking-wider uppercase mb-2 font-mono">Getting started
                             </h3>
                             <ul class="flex flex-col gap-1 text-sm">
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Installation</a>
+
+
+
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Editor setup</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Editor setup</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Compatibility</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Compatibility</a>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Upgrade guide</a>
                                 </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Upgrade guide</a>
-                                </li>
-                                <li class="border-l border-white/20"><a href="" class="flex px-5 py-1">Colors</a></li>
+                                <li class="group hover:border-white/40 border-l border-white/20"><a href=""
+                                        class="flex px-5 py-1 group-hover:text-white">Colors</a></li>
                             </ul>
                         </div>
+
                     </nav>
                 </div>
 
@@ -229,7 +288,9 @@
         </div>
 
         <!-- Skiljekolumn -->
-        <div class="bg-white/10 row-span-full col-start-2"></div>
+        <div
+            class="row-span-full col-start-2 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
+        </div>
 
         <!-- Main -->
         <main class="px-20 py-8 row-start-1 col-start-3 mb-32">
@@ -256,11 +317,12 @@
                     <div>
                         <!-- Tabs -->
                         <ul class="border-b border-white/10 flex gap-6">
-                            <li><button class="py-3 text-sm text-white border-b border-white">Using Vite</button></li>
-                            <li><button class="py-3 text-sm text-white">Using PostCSS</button></li>
-                            <li><button class="py-3 text-sm text-white">Tailwind CLI</button></li>
-                            <li><button class="py-3 text-sm text-white">Framework guides</button></li>
-                            <li><button class="py-3 text-sm text-white">Play CDN</button></li>
+                            <li><button class="py-3 text-sm text-white -mb-px border-b border-white">Using Vite</button>
+                            </li>
+                            <li><button class="py-3 text-sm text-white -mb-px">Using PostCSS</button></li>
+                            <li><button class="py-3 text-sm text-white -mb-px">Tailwind CLI</button></li>
+                            <li><button class="py-3 text-sm text-white -mb-px">Framework guides</button></li>
+                            <li><button class="py-3 text-sm text-white -mb-px">Play CDN</button></li>
                         </ul>
 
                         <!-- Tabs innehåll -->
@@ -411,7 +473,9 @@
         </main>
 
         <!-- Skiljekolumn -->
-        <div class="bg-white/10 row-span-full col-start-4"></div>
+        <div
+            class=" row-span-full col-start-4 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
+        </div>
 
         <!-- Footer -->
         <footer class="col-[2/-1] row-start-2">
@@ -454,6 +518,40 @@
             <div class="px-10 mb-24">
 
                 <div class="flex px-20">
+                    <div class="bg-white/10 rounded-full flex p-0.75">
+
+
+                        <button class="size-7 flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                            </svg>
+
+                        </button>
+
+                        <button class="size-7 flex items-center justify-center rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                            </svg>
+
+
+                        </button>
+
+                        <button
+                            class="size-7 flex items-center justify-center rounded-full bg-gray-700 border-white/10 border">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                            </svg>
+
+
+                        </button>
+
+                    </div>
                     <p class="ml-auto text-sm text-gray-500">Copyright © 2026 Tailwind Labs Inc.· <a href=""
                             class="text-gray-500">Trademark Policy</a></p>
 
