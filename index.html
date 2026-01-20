@@ -47,10 +47,11 @@
         </a>
     </header>
     <!-- HUVUDINNEHÅLL -->
-    <div class="grid grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15 grid-rows-[auto_auto]">
+
+    <div class="grid lg:grid-cols-[18rem_2.5rem_1fr_2.5rem] min-h-dvh pt-15 grid-rows-[auto_auto]">
 
         <!-- Sidebar -->
-        <div class="relative row-span-full col-start-1">
+        <div class="relative hidden lg:block row-span-full col-start-1">
             <div class="absolute inset-0">
                 <div class="sticky top-15 bottom-0 h-full max-h-[calc(100dvh-60px)] overflow-y-auto px-6 py-8">
 
@@ -289,20 +290,17 @@
 
         <!-- Skiljekolumn -->
         <div
-            class="row-span-full col-start-2 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
+            class="hidden lg:block row-span-full col-start-2 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
         </div>
 
         <!-- Main -->
-        <main class="px-20 py-8 row-start-1 col-start-3 mb-32">
+        <main class="px-20 py-8 row-start-1 lg:col-start-3 mb-32">
             <article>
                 <header class="mb-10">
-                    <!-- Björn skriver text-xs, verkar inte slå igenom för mig, samma med mt-3 coh mb-6 -->
                     <p class="font-mono text-xs tracking-wider uppercase text-gray-500 mt-3 mb-6">Installation</p>
 
-                    <!-- Björn skriver text-3xl men funkar inte för mig -->
                     <h1 class="text-white text-3xl">Get started with Tailwind CSS</h1>
 
-                    <!-- Björn skriver text-base/normal och my-4 men verkar inte fungera för mig -->
                     <p class="text-base/relaxed my-4">Tailwind CSS works by scanning all of your HTML files, JavaScript
                         components, and any other
                         templates for class names, generating the corresponding styles and then writing them to a static
@@ -336,10 +334,12 @@
                             </div>
 
                             <!-- step by step grid -->
-                            <div class="grid grid-cols-[auto_2fr_3fr] gap-x-8 gap-y-12 items-start">
+                            <div
+                                class="grid grid-cols-[auto_1fr] xl:grid-cols-[auto_2fr_3fr] gap-x-8 gap-y-8 xl:gap-y-12 items-start">
 
                                 <!-- Siffra -->
-                                <div class="border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                <div
+                                    class="row-span-2 xl:row-span-1 border border-white/50 h-7 w-7 flex justify-center items-center relative">
                                     <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
                                     <div class="text-[10px] font-mono relative">01</div>
                                 </div>
@@ -356,7 +356,7 @@
                                 </div>
 
                                 <!-- Kodrutan -->
-                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl">
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl mb-8 xl:mb-0">
                                     <!-- Toppdelen av kodrutan -->
                                     <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
                                         <p class="text-white/50 text-xs">Terminal</p>
@@ -389,7 +389,8 @@
                                 </div>
 
                                 <!-- Siffra -->
-                                <div class="border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                <div
+                                    class="row-span-2 xl:row-span-1 border border-white/50 h-7 w-7 flex justify-center items-center relative">
                                     <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
                                     <div class="text-[10px] font-mono relative">01</div>
                                 </div>
@@ -406,7 +407,7 @@
                                 </div>
 
                                 <!-- Kodrutan -->
-                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl">
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl mb-8 xl:mb-0">
                                     <!-- Toppdelen av kodrutan -->
                                     <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
                                         <p class="text-white/50 text-xs">Terminal</p>
@@ -437,6 +438,160 @@
                                             </pre>
                                     </div>
                                 </div>
+
+                                <!-- Siffra -->
+                                <div
+                                    class="row-span-2 xl:row-span-1 border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                    <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
+                                    <div class="text-[10px] font-mono relative">01</div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-sm">
+                                    <h3 class="text-slate-200 font-medium mb-3">Create your project</h3>
+                                    <p class="text-sm/6">
+                                        Start by creating a new Vite project if you don’t have one set up already.
+                                        The
+                                        most common approach is to use <a href=""
+                                            class="text-white font-medium underline underline-offset-3">Create
+                                            Vite</a>.</p>
+                                </div>
+
+                                <!-- Kodrutan -->
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl mb-8 xl:mb-0">
+                                    <!-- Toppdelen av kodrutan -->
+                                    <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
+                                        <p class="text-white/50 text-xs">Terminal</p>
+                                        <button class="opacity-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                            </svg>
+
+
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Innehållet i kodrutan -->
+                                    <div class="border border-white/5 bg-white/5 rounded-l">
+
+                                        <!-- pre är ett element för förformaterad text. Den ser till att allt sådant som mellanslag och tabbningar kommer med och är kvar -->
+                                        <pre class="flex p-5 text-sm">
+
+                                                <!-- Code är ett element som är bra för att presentera just kod. Den ser till att ett monoteckensnitt används. I monoteckensnitt är alla bokstäver lika breda, används ofta för kod -->
+                                                <code class="flex flex-col">
+                                                    <span><span class="text-pink-400">npm</span> <span class="text-sky-300">create vite@latest my-project </span> </span>
+                                                    <span><span class="text-violet-300">cd</span> <span class="text-sky-300">my-project</span> </span>
+
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+
+                                <!-- Siffra -->
+                                <div
+                                    class="row-span-2 xl:row-span-1 border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                    <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
+                                    <div class="text-[10px] font-mono relative">01</div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-sm">
+                                    <h3 class="text-slate-200 font-medium mb-3">Create your project</h3>
+                                    <p class="text-sm/6">
+                                        Start by creating a new Vite project if you don’t have one set up already.
+                                        The
+                                        most common approach is to use <a href=""
+                                            class="text-white font-medium underline underline-offset-3">Create
+                                            Vite</a>.</p>
+                                </div>
+
+                                <!-- Kodrutan -->
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl mb-8 xl:mb-0">
+                                    <!-- Toppdelen av kodrutan -->
+                                    <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
+                                        <p class="text-white/50 text-xs">Terminal</p>
+                                        <button class="opacity-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                            </svg>
+
+
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Innehållet i kodrutan -->
+                                    <div class="border border-white/5 bg-white/5 rounded-l">
+
+                                        <!-- pre är ett element för förformaterad text. Den ser till att allt sådant som mellanslag och tabbningar kommer med och är kvar -->
+                                        <pre class="flex p-5 text-sm">
+
+                                                <!-- Code är ett element som är bra för att presentera just kod. Den ser till att ett monoteckensnitt används. I monoteckensnitt är alla bokstäver lika breda, används ofta för kod -->
+                                                <code class="flex flex-col">
+                                                    <span><span class="text-pink-400">npm</span> <span class="text-sky-300">create vite@latest my-project </span> </span>
+                                                    <span><span class="text-violet-300">cd</span> <span class="text-sky-300">my-project</span> </span>
+
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+
+                                <!-- Siffra -->
+                                <div
+                                    class="row-span-2 xl:row-span-1 border border-white/50 h-7 w-7 flex justify-center items-center relative">
+                                    <div class="w-5 h-7 bg-gray-950 absolute -top-px"></div>
+                                    <div class="text-[10px] font-mono relative">01</div>
+                                </div>
+
+                                <!-- Text -->
+                                <div class="text-sm">
+                                    <h3 class="text-slate-200 font-medium mb-3">Create your project</h3>
+                                    <p class="text-sm/6">
+                                        Start by creating a new Vite project if you don’t have one set up already.
+                                        The
+                                        most common approach is to use <a href=""
+                                            class="text-white font-medium underline underline-offset-3">Create
+                                            Vite</a>.</p>
+                                </div>
+
+                                <!-- Kodrutan -->
+                                <div class="bg-white/5 border border-white/10 p-0.75 rounded-xl mb-8 xl:mb-0">
+                                    <!-- Toppdelen av kodrutan -->
+                                    <div class="flex justify-between pl-3 pr-2 pb-2 pt-1">
+                                        <p class="text-white/50 text-xs">Terminal</p>
+                                        <button class="opacity-50">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="size-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184" />
+                                            </svg>
+
+
+                                        </button>
+
+                                    </div>
+
+                                    <!-- Innehållet i kodrutan -->
+                                    <div class="border border-white/5 bg-white/5 rounded-l">
+
+                                        <!-- pre är ett element för förformaterad text. Den ser till att allt sådant som mellanslag och tabbningar kommer med och är kvar -->
+                                        <pre class="flex p-5 text-sm">
+
+                                                <!-- Code är ett element som är bra för att presentera just kod. Den ser till att ett monoteckensnitt används. I monoteckensnitt är alla bokstäver lika breda, används ofta för kod -->
+                                                <code class="flex flex-col">
+                                                    <span><span class="text-pink-400">npm</span> <span class="text-sky-300">create vite@latest my-project </span> </span>
+                                                    <span><span class="text-violet-300">cd</span> <span class="text-sky-300">my-project</span> </span>
+
+                                                </code>
+                                            </pre>
+                                    </div>
+                                </div>
+
                             </div>
 
 
@@ -474,7 +629,7 @@
 
         <!-- Skiljekolumn -->
         <div
-            class=" row-span-full col-start-4 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
+            class="hidden lg:block row-span-full col-start-4 bg-[repeating-linear-gradient(315deg,transparent_0,#fff_1px,transparent_0,transparent_50%)] bg-size-[10px_10px] opacity-20 border-x border-white/50">
         </div>
 
         <!-- Footer -->
