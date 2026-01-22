@@ -19,4 +19,3 @@ const responsiveSidebar = () => {
 }
 
 responsiveSidebar()
-s

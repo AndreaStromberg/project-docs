@@ -7,6 +7,8 @@
     <title>Project Docs</title>
     <link href="style.css" rel="stylesheet">
     <script src="assets/sidebar.js" defer></script>
+    <script src="assets/menu.js" defer></script>
+    <script src="assets/search.js" defer></script>
 </head>
 
 <body class="bg-gray-950 text-gray-300">
@@ -18,7 +20,7 @@
 
             <a href="" class="text-white text-2xl font-medium">rabbitdocs</a>
 
-            <button
+            <button id="search-button"
                 class="hidden md:flex item-center gap-1 pl-1.5 py-0.5 pr-2 ml-auto mr-6 bg-white/5 rounded-full border border-white/5">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-4 stroke-gray-600">
@@ -53,7 +55,7 @@
             <!-- knappar som ska synas i mobilläge -->
             <div class="flex gap-2 items-center md:hidden">
 
-                <button class="size-7 rounded-md flex items-center justify-center">
+                <button id="search-button-resp" class="size-7 rounded-md flex items-center justify-center">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
                         <path fill-rule="evenodd"
@@ -64,7 +66,7 @@
                 </button>
 
 
-                <button class="size-7 rounded-md flex items-center justify-center hover:bg-white/10">
+                <button id="menu-button" class="size-7 rounded-md flex items-center justify-center hover:bg-white/10">
 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
                         <path
@@ -106,6 +108,59 @@
         </div>
 
     </header>
+
+    <!-- Responsiv meny -->
+    <nav id="responsive-menu" class="hidden md:hidden bg-gray-950 fixed inset-0 z-999 px-6">
+
+        <!-- Miniheader i menyn -->
+        <div class="flex justify-between h-14 items-center">
+            <a href="" class="text-white text-2xl font-medium">rabbitdocs</a>
+            <button id="menu-close" class="size-7 rounded-md flex items-center justify-center hover:bg-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                    <path
+                        d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+                </svg>
+
+            </button>
+        </div>
+
+        <ul class="text-xl flex flex-col">
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Docs</a></li>
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Plus</a></li>
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Blog</a></li>
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Showcase</a>
+            </li>
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Sponsor</a></li>
+            <li><a href="" class="text-white flex w-full py-3 px-3 -ml-3 rounded-lg hover:bg-white/10 ">Github</a></li>
+        </ul>
+
+
+    </nav>
+
+    <!-- dialogruta som ska öppnas när man klickar på sökknappen eller trycker crtl K -->
+    <dialog id="search-modal"
+        class="fixed max-w-2xl w-full bg-gray-800 top-[50%] left-[50%] z-999 -translate-[50%] rounded-lg border-t border-white/5 backdrop:bg-gray-900/80">
+
+        <div class="flex text-gray-400 p-4 items-center">
+            <label for="search-input">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                    <path fill-rule="evenodd"
+                        d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </label>
+
+            <input id="search-input" type="text" placeholder="Search documentation"
+                class="text-white max-w-md w-full ml-2 text-sm focus:outline-0">
+
+            <button id="search-close"
+                class="ml-auto border border-white/15 text-xs/4 text-gray-500 py-0.5 px-1.5 pb-1 rounded-md flex items-center justify-center">esc
+
+            </button>
+
+        </div>
+
+    </dialog>
 
 
 
