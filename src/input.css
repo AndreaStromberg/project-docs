@@ -1,3 +1,9 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .theme-active {
+    @apply bg-white border-sky-950/20 dark:bg-gray-700 dark:border-white/10 border;
+  }
+}

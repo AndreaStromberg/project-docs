@@ -9,6 +9,7 @@
     <script src="assets/sidebar.js" defer></script>
     <script src="assets/menu.js" defer></script>
     <script src="assets/search.js" defer></script>
+    <script src="assets/theme.js" defer></script>
 </head>
 
 <body class="bg-white text-gray-700  dark:bg-gray-950 dark:text-gray-300">
@@ -881,7 +882,8 @@
                     <div class="bg-gray-950/10 dark:bg-white/10 rounded-full flex p-0.75">
 
 
-                        <button class="size-7 flex items-center justify-center rounded-full">
+                        <button id="button-theme-system" data-theme="system-default"
+                            class="size-7 flex items-center justify-center rounded-full theme-active">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-4.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -890,7 +892,8 @@
 
                         </button>
 
-                        <button class="size-7 flex items-center justify-center rounded-full">
+                        <button id="button-theme-light" data-theme="light"
+                            class="size-7 flex items-center justify-center rounded-full">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -900,8 +903,8 @@
 
                         </button>
 
-                        <button
-                            class="size-7 flex items-center justify-center rounded-full bg-white border-sky-950/20 dark:bg-gray-700 dark:border-white/10 border">
+                        <button id="button-theme-dark" data-theme="dark"
+                            class="size-7 flex items-center justify-center rounded-full ">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                 stroke="currentColor" class="size-4.5">
                                 <path stroke-linecap="round" stroke-linejoin="round"
